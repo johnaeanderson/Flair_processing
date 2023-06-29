@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>      
+    <meta charset="utf-8" />    
+    <style type="text/css">
+      body {
+        font-family: 'Source Code Pro', Courier New;
+        color: #606060;
+        padding: 1em 1em 1em 2em;
+        font-size: 10pt;  
+        min-width: 1000px;
+      }
+      .column-left{ 
+         float: left; 
+         width: 33%; 
+         text-align: left;   
+         border-right: 1px dotted silver;
+      }
+      .column-right{ 
+         float: right; 
+         width: 33%;                   
+      }
+      .column-center{ 
+         display: inline-block; 
+         width: 33%;
+         border-right: 1px dotted silver;
+      }
+      .ta_right {
+        text-align: right; 
+      }
+      .column-01{ 
+         float: left; 
+         width: 49%; 
+         text-align: left; 
+        margin-bottom: 30px;
+      }
+      .column-02{ 
+         float: right; 
+         width: 49%; 
+         text-align: left;         
+      }
+      .canvas {
+        height: 325px;        
+        text-align: left;
+        min-width: 500px;
+      }
+    </style>
+        <script src="/Users/johnanderson/Documents/MATLAB/spm12/toolbox/LST/js/raphael.js"></script>
+    <script src="/Users/johnanderson/Documents/MATLAB/spm12/toolbox/LST/js/jquery.min.js"></script>
+    <link href="/Users/johnanderson/Documents/MATLAB/spm12/toolbox/LST/js/jquery-ui.css" rel="stylesheet"></script>
+    <script src="/Users/johnanderson/Documents/MATLAB/spm12/toolbox/LST/js/jquery-ui.js"></script>
+  </head>
+  <body>
+
+<div class="container">
+  <h1>Lesion segmentation by LST</h1>
+  <div class="column-01">
+    <h2>Input summary</h2>
+      <table style="min-width: 500px;">
+        <tr>
+            <td>Date of analysis</td>
+            <td class="ta_right">29-Jun-2023 16:57:31</td>
+        </tr>
+       <tr>
+           <td>Algorithm used for segmentation</td>
+           <td class="ta_right">LPA</td>
+       </tr>
+        <tr>
+          <td>FLAIR image</td>
+          <td class="ta_right">...2_ses-1_FLAIR_ror_restore.nii</td>
+       </tr>
+        <tr>
+          <td>Reference image</td>
+          <td class="ta_right">none</td>
+       </tr>
+   </table>
+   </div>
+   <div class="column-02">
+     <h2>Results</h2>
+         <table style="width: 500px">
+             <tr>
+                 <td>Lesion map</td>
+                 <td class="ta_right">ples_lpa_m102_ses-1_FLAIR_ror_restore.nii</td>
+             </tr>
+             <tr>
+                 <td>Lesion volume</td>
+                 <td class="ta_right">1.0866 ml</td>
+             </tr>
+             <tr>
+                 <td>Number of lesions</td>
+                 <td class="ta_right">12</td>
+             </tr>
+        </table>
+    </div>
+    <div style="clear:both"></div>
+    <div class="column-01">
+      <h2>Lesion location</h2>
+      <img src="/Users/johnanderson/Downloads/FLAIR_York_Sample/make_example/outputs/LST_lpa_m102_ses-1_FLAIR_ror_restore/gb_2.png" width="120px" style="vertical-align: top;">
+      <img src="/Users/johnanderson/Downloads/FLAIR_York_Sample/make_example/outputs/LST_lpa_m102_ses-1_FLAIR_ror_restore/gb_1.png" width="169.41px" style="vertical-align: top;"><br>
+      <img src="/Users/johnanderson/Downloads/FLAIR_York_Sample/make_example/outputs/LST_lpa_m102_ses-1_FLAIR_ror_restore/gb_3.png" width="120px" style="vertical-align: top;">
+    </div>
+    <div class="column-02" style="vertical-align: top;">
+        <h2>Overlay</h2>
+Sorry, there was a problem when creating the PNG images. MATLAB said: This functionality is not supported under the -nojvm startup option.
+    </div>
+    <div style="clear:both"></div>
+  </div>
+<br><hr>
+  </head>
+  <body>
