@@ -1,17 +1,17 @@
-# FLAIR processing 
+# FLAIR processing
 #### written by John Anderson, PhD Thursday 29 June 2023
 
 This directory contains a series of scripts that will preprocess FLAIR images and prepare them for lesion estimation and conversion to MNI space. Note, the Lesion Quantification Toolkit will be run on these derivatives.
 
 Raw data (FLAIR and T1-weighted images) should be placed in the original_data folder, and the subs.txt file should be updated to indicate which files need to be processed.
 
-Scripts are kept in the "scripts" directory, and outputs will appear in the "outputs" directory. 
+Scripts are kept in the "scripts" directory, and outputs will appear in the "outputs" directory.
 
 to run all scripts on new data, open a terminal at the root directory, and type **make**
 
 **Scripts (contained in the scripts directory) are:**
 
-1. image\_processing\_01\_preprocessing.sh 
+1. image\_processing\_01\_preprocessing.sh
 	This script reorients the brain to the MNI standard, crops the field of view, applies intensity normalization, and applies hd-bet to all images (a superior version of bet)
 2. image\_processing\_02\_matlab\_ples.sh
 	 This script calls the lesion segmentation toolbox (a subsidiary toolbox build for SPM12) to estimate the white matter hyperintense regions in subject space
@@ -24,4 +24,3 @@ to run all scripts on new data, open a terminal at the root directory, and type 
 Outputs are contain the probabilistic lesion nifti volumes (these begin with ples_lpa and end with \_in\_MNI\_space.nii.gz. These files can be fed into other software that does disconnectome mapping such as the BCBlab toolkit or the lesion quantification toolkit in Matlab. The T1 image in MNI space is also provided for each participant, as is the LST .html output and the summary statistics in the summary.csv file (lesion volume and number).
 
 Intermediate files can be restored by uncommenting the last section of the Makefile and re-running it. # Flair_processing
-# Flair_processing
